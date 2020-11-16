@@ -6,10 +6,12 @@ server:
 eureka:
   client:
     register-with-eureka: false
-#    消费方,不对为其他服务提供服务,则没有必要注册到eureka
+    #    消费方,不对为其他服务提供服务,则没有必要注册到eureka
     service-url:
       defaultZone: http://node1:8081/eureka/,http://node1:8082/eureka/,http://node1:8082/eureka/
 
-
+logging:
+  level:
+    com.lyn.consumer: debug
 
 
